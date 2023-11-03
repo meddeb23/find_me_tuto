@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
 
 
+
         ActivityCompat.requestPermissions(this,new String[]{
                 Manifest.permission.SEND_SMS,
                 Manifest.permission.READ_SMS,
@@ -66,9 +67,6 @@ public class MainActivity extends AppCompatActivity {
         for (String s : permissions) {
             System.out.print(s + " | ");
         }
-        System.out.println();
-        for (int s : grantResults) {
-            System.out.print(s + " | ");
-        }
+        System.out.println("granted results " + grantResults.length);
     }
 }
